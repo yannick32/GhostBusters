@@ -1,388 +1,357 @@
 <html>
-  <head>
-    <!-- Bootstrap -->
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <!-- CSS only -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-      crossorigin="anonymous"
-    />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kalam&display=swap"
-      rel="stylesheet"
-    />
+<head>
+	<!-- Bootstrap -->
+	<!-- Required meta tags -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<!-- CSS only -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
 
-    <style type="text/css">
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      h1 {
-        display: block;
-        font-size: 2em;
-        margin-block-start: 0.67em;
-        margin-block-end: 0.67em;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
-        font-weight: bold;
-      }
+	<link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet" />
 
-      body {
-        background: url("journal.jpg");
-      }
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			font-family: "Kalam";
+		}
 
-      .container {
-        padding: 25px;
-      }
+		h1 {
+			display: block;
+			font-size: 2em;
+			margin-block-start: 0.67em;
+			margin-block-end: 0.67em;
+			margin-inline-start: 0px;
+			margin-inline-end: 0px;
+			font-weight: bold;
+		}
 
-      #ghosts {
-        font-family: "Kalam", cursive;
-        color: rgb(45, 45, 45);
-        border-left: solid rgb(45, 45, 45) 3px;
-        margin-left: 5px;
-        padding-left: 25px;
-      }
+		body {
+			background: url("journal.jpg");
+		}
 
-      #possibleGhosts {
-        list-style: square inside url("x.png");
-        text-transform: uppercase;
-      }
+		.container {
+			padding: 25px;
+		}
 
-      #possibleGhosts li {
-        font-size: 2em;
-        color: rgb(100, 50, 50);
-      }
+		#ghosts {
+			font-family: "Kalam", cursive;
+			color: rgb(45, 45, 45);
+			border-left: solid rgb(45, 45, 45) 3px;
+			margin-left: 5px;
+			padding-left: 25px;
+		}
 
-      #possibleGhosts p {
-        margin-top: -10px;
-        margin-bottom: 10px;
-      }
+		#possibleGhosts {
+			list-style: square inside url("x.png");
+			text-transform: uppercase;
+		}
 
-      #evidence {
-        font-family: "Kalam", cursive;
-        color: rgb(45, 45, 45);
-      }
+		#possibleGhosts li {
+			font-size: 2em;
+			color: rgb(100, 50, 50);
+		}
 
-      #evidence h1 {
-        margin-bottom: 15px;
-      }
+		#possibleGhosts p {
+			margin-top: -10px;
+			margin-bottom: 10px;
+		}
 
-      #evidence .button {
-        margin-bottom: 15px;
-      }
+		#evidence {
+			font-family: "Kalam", cursive;
+			color: rgb(45, 45, 45);
+		}
 
-      #emf,
-      #spiritbox,
-      #fingerprints,
-      #ghostorbs,
-      #ghostwritings,
-      #freezingtemperatures {
-        width: 355px;
-        height: 38px;
-        background-repeat: no-repeat;
-        background-position: left;
-      }
+		#evidence h1 {
+			margin-bottom: 15px;
+		}
 
-      #emf:hover,
-      #spiritbox:hover,
-      #fingerprints:hover,
-      #ghostorbs:hover,
-      #ghostwritings:hover,
-      #freezingtemperatures:hover {
-        cursor: pointer;
-      }
+		#evidence .button {
+			margin-bottom: 15px;
+		}
 
-      #emf {
-        background-image: url("btnsUnchecked/emf.png");
-      }
+		#emf,
+		#spiritbox,
+		#fingerprints,
+		#ghostorbs,
+		#ghostwritings,
+		#freezingtemperatures {
+			width: 355px;
+			height: 38px;
+			background-repeat: no-repeat;
+			background-position: left;
+		}
 
-      #spiritbox {
-        background-image: url("btnsUnchecked/spiritbox.png");
-      }
+		#emf:hover,
+		#spiritbox:hover,
+		#fingerprints:hover,
+		#ghostorbs:hover,
+		#ghostwritings:hover,
+		#freezingtemperatures:hover {
+			cursor: pointer;
+		}
 
-      #fingerprints {
-        background-image: url("btnsUnchecked/fingerprints.png");
-      }
+		#emf {
+			background-image: url("btnsUnchecked/emf.png");
+		}
 
-      #ghostorbs {
-        background-image: url("btnsUnchecked/ghostorbs.png");
-      }
+		#spiritbox {
+			background-image: url("btnsUnchecked/spiritbox.png");
+		}
 
-      #ghostwritings {
-        background-image: url("btnsUnchecked/ghostwritings.png");
-      }
+		#fingerprints {
+			background-image: url("btnsUnchecked/fingerprints.png");
+		}
 
-      #freezingtemperatures {
-        background-image: url("btnsUnchecked/freezingtemperatures.png");
-      }
+		#ghostorbs {
+			background-image: url("btnsUnchecked/ghostorbs.png");
+		}
 
-      .weakness {
-        color: rgb(0, 88, 0);
-      }
-    </style>
+		#ghostwritings {
+			background-image: url("btnsUnchecked/ghostwritings.png");
+		}
 
-    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js"></script>
+		#freezingtemperatures {
+			background-image: url("btnsUnchecked/freezingtemperatures.png");
+		}
 
-    <script>
-      // 1 = EMF level 5
-      // 2 = Spirit Box
-      // 3 = Fingerprints
-      // 4 = Ghost Orbs
-      // 5 = Ghost Writings
-      // 6 = Freezing Temperatures
+		.weakness {
+			color: rgb(0, 88, 0);
+		}
+	</style>
 
-      // ghost definitions
-      const ghostInfos = [
-        {
-          name: "spirit",
-          evidences: [2, 3, 5],
-          description:
-            "<b>Spiritbox + Fingerprints + Writings</b><br />No strengths. <span class='weakness'>Smudge sticks will pacify it for a while.</span>",
-        },
-        {
-          name: "wraith",
-          evidences: [2, 3, 6],
-          description:
-            "<b>Spiritbox + Fingerprints + Freezing temps</b><br />Floats, footsteps rare. <span class='weakness'>Has toxicity to salt.</span>",
-        },
-        {
-          name: "phantom",
-          evidences: [1, 4, 6],
-          description:
-            "<b>EMF Level 5 + Orbs + Freezing temps</b><br />Seeing it drops sanity fast. <span class='weakness'>Taking its photo makes it hide for a while.</span>",
-        },
-        {
-          name: "poltergeist",
-          evidences: [2, 3, 4],
-          description:
-            "<b>Spiritbox + Fingerprints + Orbs</b><br />Can throw objects around. <span class='weakness'>Ineffective in empty rooms.</span>",
-        },
-        {
-          name: "banshee",
-          evidences: [1, 3, 6],
-          description:
-            "<b>EMF Level 5 + Fingerprints + Freezing temps</b><br />Targets lone individuals. <span class='weakness'>Fears crucifix & less aggressive near them.</span>",
-        },
-        {
-          name: "jinn",
-          evidences: [1, 2, 4],
-          description:
-            "<b>EMF Level 5 + Spiritbox + Orbs</b><br />Travels fast if victim is far. <span class='weakness'>Kill electricity to stop its powers.</span>",
-        },
-        {
-          name: "mare",
-          evidences: [2, 4, 6],
-          description:
-            "<b>Spiritbox + Orbs + Freezing temps</b><br />More chances to attack in darkness. <span class='weakness'>Turn lights on to reduce aggression.</span>",
-        },
-        {
-          name: "revenant",
-          evidences: [1, 3, 5],
-          description:
-            "<b>EMF Level 5 + Fingerprints + Writings</b><br />Travels fast when hunting. <span class='weakness'>Moves slowly if it can't see humans.</span>",
-        },
-        {
-          name: "shade",
-          evidences: [1, 4, 5],
-          description:
-            "<b>EMF Level 5 + Orbs + Writings</b><br />Shy/hard to find. Less activity around groups. <span class='weakness'>Can't hunt if multiple people around.</span>",
-        },
-        {
-          name: "demon",
-          evidences: [2, 5, 6],
-          description:
-            "<b>Spiritbox + Writings + Freezing temps</b><br />Very aggressive. Attacks often. <span class='weakness'>Ouija board use won't affect sanity.</span>",
-        },
-        {
-          name: "yurei",
-          evidences: [4, 5, 6],
-          description:
-            "<b>Orbs + Writings + Freezing temps</b><br />Strong effect on sanity. <span class='weakness'>Smudging its room contains it to that room for a while.</span>",
-        },
-        {
-          name: "oni",
-          evidences: [1, 2, 5],
-          description:
-            "<b>EMF Level 5 + Spiritbox + Writings</b><br />More active with people nearby. <span class='weakness'>High activity makes it easier to find and identify.</span>",
-        },
-      ];
 
-      // Do not touch v
-      function getGhostInfoMatches(present, notPresent) {
-        return Object.values(
-          _.pickBy(
-            _.omitBy(ghostInfos, (ghost) =>
-              ghost.evidences.some((r) => notPresent.indexOf(r) >= 0)
-            ),
-            (ghost) => present.every((r) => ghost.evidences.indexOf(r) >= 0)
-          )
-        );
-      }
+	<script>
+		// 1 = EMF level 5
+		// 2 = Spirit Box
+		// 3 = Fingerprints
+		// 4 = Ghost Orbs
+		// 5 = Ghost Writings
+		// 6 = Freezing Temperatures
 
-      function getRemainingEvidenceIds(present, notPresent) {
-        return _.difference(
-          _.flatMap(
-            getGhostInfoMatches(present, notPresent),
-            (gi) => gi.evidences
-          ),
-          present
-        );
-      }
-      // Do not touch ^
+		// ghost definitions
+		const evidences = [{
+			id: "emf",
+			index: 1
+		}, {
+			id: "spiritbox",
+			index: 2
+		}, {
+			id: "fingerprints",
+			index: 3
+		}, {
+			id: "ghostorbs",
+			index: 4
+		}, {
+			id: "ghostwritings",
+			index: 5
+		}, {
+			id: "freezingtemperatures",
+			index: 6
+		}];
+		const ghostInfos = [
+			{
+				name: "spirit",
+				evidences: [2, 3, 5],
+				description:
+					"<b>Spiritbox + Fingerprints + Writings</b><br />No strengths. <span class='weakness'>Smudge sticks will pacify it for a while.</span>",
+			},
+			{
+				name: "wraith",
+				evidences: [2, 3, 6],
+				description:
+					"<b>Spiritbox + Fingerprints + Freezing temps</b><br />Floats, footsteps rare. <span class='weakness'>Has toxicity to salt.</span>",
+			},
+			{
+				name: "phantom",
+				evidences: [1, 4, 6],
+				description:
+					"<b>EMF Level 5 + Orbs + Freezing temps</b><br />Seeing it drops sanity fast. <span class='weakness'>Taking its photo makes it hide for a while.</span>",
+			},
+			{
+				name: "poltergeist",
+				evidences: [2, 3, 4],
+				description:
+					"<b>Spiritbox + Fingerprints + Orbs</b><br />Can throw objects around. <span class='weakness'>Ineffective in empty rooms.</span>",
+			},
+			{
+				name: "banshee",
+				evidences: [1, 3, 6],
+				description:
+					"<b>EMF Level 5 + Fingerprints + Freezing temps</b><br />Targets lone individuals. <span class='weakness'>Fears crucifix & less aggressive near them.</span>",
+			},
+			{
+				name: "jinn",
+				evidences: [1, 2, 4],
+				description:
+					"<b>EMF Level 5 + Spiritbox + Orbs</b><br />Travels fast if victim is far. <span class='weakness'>Kill electricity to stop its powers.</span>",
+			},
+			{
+				name: "mare",
+				evidences: [2, 4, 6],
+				description:
+					"<b>Spiritbox + Orbs + Freezing temps</b><br />More chances to attack in darkness. <span class='weakness'>Turn lights on to reduce aggression.</span>",
+			},
+			{
+				name: "revenant",
+				evidences: [1, 3, 5],
+				description:
+					"<b>EMF Level 5 + Fingerprints + Writings</b><br />Travels fast when hunting. <span class='weakness'>Moves slowly if it can't see humans.</span>",
+			},
+			{
+				name: "shade",
+				evidences: [1, 4, 5],
+				description:
+					"<b>EMF Level 5 + Orbs + Writings</b><br />Shy/hard to find. Less activity around groups. <span class='weakness'>Can't hunt if multiple people around.</span>",
+			},
+			{
+				name: "demon",
+				evidences: [2, 5, 6],
+				description:
+					"<b>Spiritbox + Writings + Freezing temps</b><br />Very aggressive. Attacks often. <span class='weakness'>Ouija board use won't affect sanity.</span>",
+			},
+			{
+				name: "yurei",
+				evidences: [4, 5, 6],
+				description:
+					"<b>Orbs + Writings + Freezing temps</b><br />Strong effect on sanity. <span class='weakness'>Smudging its room contains it to that room for a while.</span>",
+			},
+			{
+				name: "oni",
+				evidences: [1, 2, 5],
+				description:
+					"<b>EMF Level 5 + Spiritbox + Writings</b><br />More active with people nearby. <span class='weakness'>High activity makes it easier to find and identify.</span>",
+			},
+		];
+	</script>
+</head>
 
-      let evidenceArray = [];
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-lg-5">
+				<div id="evidence">
+					<h1>Evidence found</h1>
+					<div class="button" id="emf" onClick="toggleEvidence(1)"></div>
+					<div class="button" id="spiritbox" onClick="toggleEvidence(2)"></div>
+					<div class="button" id="fingerprints" onClick="toggleEvidence(3)"></div>
+					<div class="button" id="ghostorbs" onClick="toggleEvidence(4)"></div>
+					<div class="button" id="ghostwritings" onClick="toggleEvidence(5)"></div>
+					<div class="button" id="freezingtemperatures" onClick="toggleEvidence(6)"></div>
+				</div>
+				<p style="text-transform: uppercase;">Right click if you are sure that the ghost doesn't give that evidence.</p>
+			</div>
+			<div class="col-12 col-lg-7">
+				<div id="ghosts">
+					<h1>Possible Ghosts</h1>
+					<ul id="possibleGhosts">
+						<br />
+						<p>
+							We need tangible evidence. I should check rooms with an EMF
+							reader for activity, or a thermometer for sub-zero temperatures.
+						</p>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 
-      function toggleEvidence(evidence) {
-        console.clear();
+	<!-- JS, Lodash, Popper.js, and jQuery -->
+	<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+		integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+	<script>
 
-        // if that evidence doesn't exist in the array (-1)
-        if (evidenceArray.indexOf(evidence) === -1) {
-          evidenceArray.push(evidence);
-        } else {
-          evidenceArray.splice(evidenceArray.indexOf(evidence), 1);
-        }
+		// Bind on right click events
+		$("#evidence > div").on("contextmenu", toggleEvidenceFilter);
 
-        // get ghost matches according to entered evidence
-        document.getElementById("possibleGhosts").innerHTML = "";
+		// Do not touch v
+		function getGhostInfoMatches(present, notPresent) {
+			return Object.values(
+				_.pickBy(
+					_.omitBy(ghostInfos, (ghost) =>
+						ghost.evidences.some((r) => notPresent.indexOf(r) >= 0)
+					),
+					(ghost) => present.every((r) => ghost.evidences.indexOf(r) >= 0)
+				)
+			);
+		}
 
-        getGhostInfoMatches(evidenceArray, []).forEach((ghostInfo) => {
-          // getGhostMatches([foundEvidence], [missingEvidence])
-          document.getElementById("possibleGhosts").innerHTML +=
-            "<li>" + ghostInfo.name + "</li> <p>" + ghostInfo.description;
-        });
+		function getRemainingEvidenceIds(present, notPresent) {
+			return _.difference(
+				_.flatMap(
+					getGhostInfoMatches(present, notPresent),
+					(gi) => gi.evidences
+				),
+				present
+			);
+		}
+		// Do not touch ^
 
-        if (evidenceArray.length == 0) {
-          document.getElementById("possibleGhosts").innerHTML =
-            "<br /><p>We need tangible evidence. I should check rooms with an EMF reader for activity, or a thermometer for sub-zero temperatures.</p>";
-        }
+		let evidenceArray = [];
+		let evidenceFilterArray = [];
 
-        document.getElementById("emf").style.backgroundImage =
-          "url('btnsDisabled/emf.png')";
-        document.getElementById("spiritbox").style.backgroundImage =
-          "url('btnsDisabled/spiritbox.png')";
-        document.getElementById("fingerprints").style.backgroundImage =
-          "url('btnsDisabled/fingerprints.png')";
-        document.getElementById("ghostorbs").style.backgroundImage =
-          "url('btnsDisabled/ghostorbs.png')";
-        document.getElementById("ghostwritings").style.backgroundImage =
-          "url('btnsDisabled/ghostwritings.png')";
-        document.getElementById("freezingtemperatures").style.backgroundImage =
-          "url('btnsDisabled/freezingtemperatures.png')";
+		function toggleEvidence(evidence) {
+			if (!evidenceArray.includes(evidence)) evidenceArray.push(evidence);
+			else evidenceArray = evidenceArray.filter(e => e !== evidence);
+			updateUI();
+		}
 
-        getRemainingEvidenceIds(evidenceArray, []).forEach((evidenceId) => {
-          document.getElementById(
-            getEvidenceByID(evidenceId)
-          ).style.backgroundImage =
-            "url('btnsUnchecked/" + getEvidenceByID(evidenceId) + ".png')"; // enabled button (possible evidence)
-        });
+		function updateUI() {
+			const ghostsWrapper = $("#possibleGhosts");
+			ghostsWrapper.html("");
 
-        for (var i = 0; i < evidenceArray.length; i++) {
-          document.getElementById(
-            getEvidenceByID(evidenceArray[i])
-          ).style.backgroundImage =
-            "url('btnsChecked/" + getEvidenceByID(evidenceArray[i]) + ".png')"; // selected button
-        }
-      }
+			// Get possible ghosts
+			let possibleGhosts = getGhostInfoMatches(evidenceArray, evidenceFilterArray);
+			if (!evidenceArray.length && !evidenceFilterArray.length)
+				ghostsWrapper.append("<br /><p>We need tangible evidence. I should check rooms with an EMF reader for activity, or a thermometer for sub-zero temperatures.</p>");
+			else if (!possibleGhosts.length)
+				ghostsWrapper.append("<br /><p>This ghost doesn't exist yet. Double-check your evidences.</p>");
+			else
+				possibleGhosts.forEach(ghost => {
+					ghostsWrapper.append(`<li>${ghost.name}</li><p>${ghost.description}</p>`);
+				});
 
-      function getEvidenceByID(id) {
-        switch (id) {
-          case 1:
-            return "emf";
-            break;
-          case 2:
-            return "spiritbox";
-            break;
-          case 3:
-            return "fingerprints";
-            break;
-          case 4:
-            return "ghostorbs";
-            break;
-          case 5:
-            return "ghostwritings";
-            break;
-          case 6:
-            return "freezingtemperatures";
-            break;
-          default:
-            return "error";
-        }
-      }
-    </script>
-  </head>
+			// Update background images
+			const remainingEvidenceIds = getRemainingEvidenceIds(evidenceArray, []);
+			for (let e of evidences) {
+				const checked = evidenceArray.includes(e.index);
+				const customDisabled = evidenceFilterArray.includes(e.index);
+				const unchecked = remainingEvidenceIds.includes(e.index)
 
-  <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-lg-5">
-          <div id="evidence">
-            <h1>Evidence found</h1>
-            <div class="button" id="emf" onClick="toggleEvidence(1)"></div>
-            <div
-              class="button"
-              id="spiritbox"
-              onClick="toggleEvidence(2)"
-            ></div>
-            <div
-              class="button"
-              id="fingerprints"
-              onClick="toggleEvidence(3)"
-            ></div>
-            <div
-              class="button"
-              id="ghostorbs"
-              onClick="toggleEvidence(4)"
-            ></div>
-            <div
-              class="button"
-              id="ghostwritings"
-              onClick="toggleEvidence(5)"
-            ></div>
-            <div
-              class="button"
-              id="freezingtemperatures"
-              onClick="toggleEvidence(6)"
-            ></div>
-          </div>
-        </div>
-        <div class="col-12 col-lg-7">
-          <div id="ghosts">
-            <h1>Possible Ghosts</h1>
-            <ul id="possibleGhosts">
-              <br />
-              <p>
-                We need tangible evidence. I should check rooms with an EMF
-                reader for activity, or a thermometer for sub-zero temperatures.
-              </p>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- JS, Popper.js, and jQuery -->
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
-  </body>
+				if (checked) $("#" + e.id).css("background-image", `url('btnsChecked/${e.id}.png')`);
+				else if (unchecked) $("#" + e.id).css("background-image", `url('btnsUnchecked/${e.id}.png')`);
+				else $("#" + e.id).css("background-image", `url('btnsDisabled/${e.id}.png')`);
+
+				$("#" + e.id).css("opacity", customDisabled? 0.65 : 1)
+			}
+		}
+
+		function getEvidenceByID(id) {
+			return evidences.find(e => e.id === id)?.index;
+		}
+
+		function toggleEvidenceFilter(event) {
+			event.preventDefault();
+
+			const evidenceIndex = getEvidenceByID(event.target.id);
+			if (evidenceFilterArray.includes(evidenceIndex))
+				evidenceFilterArray = evidenceFilterArray.filter(e => e !== evidenceIndex);
+			else evidenceFilterArray.push(evidenceIndex)
+
+			updateUI();
+		}
+	</script>
+</body>
+
 </html>
