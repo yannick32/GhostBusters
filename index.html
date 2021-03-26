@@ -255,7 +255,7 @@
       let evidenceArray = [];
 
       function toggleEvidence(evidence) {
-        console.clear();
+        // console.clear();
         // if that evidence doesn't exist in the array (-1)
         if (evidenceArray.indexOf(evidence) === -1) {
           evidenceArray.push(evidence);
@@ -330,8 +330,8 @@
         }
       }
       function resetEvidence() {
-        for (var i = 0; i < evidenceArray.length; i++) {
-          toggleEvidence(evidenceArray[i]);
+        while (evidenceArray.length > 0) {
+          toggleEvidence(evidenceArray[0]);
         }
       }
     </script>
