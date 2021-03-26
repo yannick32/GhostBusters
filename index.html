@@ -35,6 +35,10 @@
         font-weight: bold;
       }
 
+      h1.button {
+        
+      }
+
       body {
         background: url("journal.jpg");
       }
@@ -79,6 +83,8 @@
         margin-bottom: 15px;
       }
 
+
+
       #emf,
       #spiritbox,
       #fingerprints,
@@ -96,7 +102,8 @@
       #fingerprints:hover,
       #ghostorbs:hover,
       #ghostwritings:hover,
-      #freezingtemperatures:hover {
+      #freezingtemperatures:hover,
+      #reset {
         cursor: pointer;
       }
 
@@ -122,6 +129,10 @@
 
       #freezingtemperatures {
         background-image: url("btnsUnchecked/freezingtemperatures.png");
+      }
+
+      #reset {
+        background-image: url(btnsUnchecked/reset.png);
       }
 
       .weakness {
@@ -242,7 +253,6 @@
 
       function toggleEvidence(evidence) {
         console.clear();
-
         // if that evidence doesn't exist in the array (-1)
         if (evidenceArray.indexOf(evidence) === -1) {
           evidenceArray.push(evidence);
@@ -316,6 +326,11 @@
             return "error";
         }
       }
+      function resetEvidence() {
+        for (var i = 0; i < evidenceArray.length; i++) {
+          toggleEvidence(evidenceArray[i]);
+        }
+      }
     </script>
   </head>
 
@@ -324,7 +339,7 @@
       <div class="row">
         <div class="col-12 col-lg-5">
           <div id="evidence">
-            <h1>Evidence found</h1>
+            <h1>Evidence found <div class="button" id="reset" onClick="resetEvidence()"></div></h1>
             <div class="button" id="emf" onClick="toggleEvidence(1)"></div>
             <div
               class="button"
@@ -351,6 +366,7 @@
               id="freezingtemperatures"
               onClick="toggleEvidence(6)"
             ></div>
+          
           </div>
         </div>
         <div class="col-12 col-lg-7">
