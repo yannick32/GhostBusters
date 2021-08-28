@@ -133,7 +133,7 @@
         }
 
         #dotsProjector {
-            background-image: url("btnsUnchecked/emf.png");
+            background-image: url("btnsUnchecked/dotsProjector.png");
         }
 
         #reset {
@@ -321,7 +321,7 @@
             document.getElementById("freezingtemperatures").style.backgroundImage =
                 "url('btnsDisabled/freezingtemperatures.png')";
             document.getElementById("dotsProjector").style.backgroundImage =
-                "url('btnsDisabled/emf.png')";
+                "url('btnsDisabled/dotsProjector.png')";
 
             getRemainingEvidenceIds(evidenceArray, []).forEach((evidenceId) => {
                 document.getElementById(
@@ -359,7 +359,7 @@
                     return "freezingtemperatures";
                     break;
                 case 7:
-                    return "emf"
+                    return "dotsProjector"
                     break;
                 default:
                     return "error";
