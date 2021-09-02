@@ -19,6 +19,7 @@ h1.button {
 
 body {
     background: url("images/journal.jpg");
+    overflow-y: scroll;
 }
 
 .container {
@@ -91,5 +92,6 @@ body {
     list-style-image: url("images/checked.png");
 }
 #evidence li.disabled {
-    list-style-image: url("images/disabled.png");
+    text-decoration-line: line-through;
+    text-decoration-width: 10px ;
 }
