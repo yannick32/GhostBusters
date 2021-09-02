@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+h1.button {
+
+}
+
+body {
+    background: url("images/journal.jpg");
+}
+
+.container {
+    padding: 25px;
+}
+
+#ghosts {
+    font-family: "Kalam", cursive;
+    color: rgb(45, 45, 45);
+    border-left: solid rgb(45, 45, 45) 3px;
+    margin-left: 5px;
+    padding-left: 25px;
+}
+
+#possibleGhosts {
+    list-style: square inside url("images/x.png");
+    text-transform: uppercase;
+}
+
+#possibleGhosts li {
+    font-size: 2em;
+    color: rgb(100, 50, 50);
+}
+
+#possibleGhosts p {
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+#evidence {
+    font-family: "Kalam", cursive;
+    color: rgb(45, 45, 45);
+}
+
+#evidence h1 {
+    margin-bottom: 15px;
+}
+
+#evidence .button {
+    margin-bottom: 15px;
+}
+
+#reset {
+    height: 38px;
+    font-family: "Kalam", cursive;
+    font-size: 1em;
+    font-weight: normal;
+}
+
+.weakness {
+    color: rgb(0, 88, 0);
+}
+
+#evidence li, #reset {
+    cursor: pointer;
+}
+
+#evidence ul {
+    padding-left: 2em;
+}
+
+#evidence li {
+    width: 355px;
+    height: 38px;
+    font-family: "Kalam", cursive;
+    font-size: 2em;
+    list-style-image: url("images/unchecked.png");
+}
+#evidence li.checked {
+    list-style-image: url("images/checked.png");
+}
+#evidence li.disabled {
+    list-style-image: url("images/disabled.png");
+}
